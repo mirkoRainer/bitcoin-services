@@ -28,5 +28,19 @@ export const data: Service[] = [
     description: 'Leverage the power of Bitcoin + Health Care Crowdfunding to put decisions about your health back in your hands.',
     locales: [Locale.US],
     categories: [ServiceCategory.Medical]
+  },
+  {
+    name: 'Beef Initiative',
+    url: 'https://beefinitiative.com/',
+    description: 'The Beef Initiative is a trade group focused on decentralizing and making our food supply more localized, redundant and secure, and improving the quality of our food through pure animal protein and sound money, which is a critical input to achieving food security.',
+    locales: [Locale.US],
+    categories: [ServiceCategory.Food, ServiceCategory.Education]
+  },
+  {
+    name: 'BTC Pay Server',
+    url: 'https://btcpayserver.org/',
+    description: 'BTCPay Server is a self-hosted, open-source cryptocurrency payment processor. It\'s secure, private, censorship-resistant and free.',
+    locales: [Locale.Global],
+    categories: [ServiceCategory['Business Products'], ServiceCategory.Payments]
   }
 ];
