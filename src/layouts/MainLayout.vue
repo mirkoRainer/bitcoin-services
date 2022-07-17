@@ -3,8 +3,9 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          Bitcoin Services
+          BitcoinServices.info
         </q-toolbar-title>
+          <p class="text-subtitle1 q-mr-sm q-mt-lg">A pleb community currated list of <strong>Bitcoin only</strong> services.</p>
         <q-btn :color="dark ? 'secondary' : 'black'" @click="toggle">{{ dark ? 'Light' : 'Dark' }}</q-btn>
       </q-toolbar>
     </q-header>
