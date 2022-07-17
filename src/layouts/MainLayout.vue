@@ -1,12 +1,12 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <q-toolbar-title>
+      <q-toolbar :class="$q.dark.isActive ? 'bg-secondary' : 'bg-primary'">
+        <q-toolbar-title :class="$q.dark.isActive ? 'text-black' : 'text-white'">
           BitcoinServices.info
         </q-toolbar-title>
-          <p class="text-subtitle1 q-mr-sm q-mt-lg">A pleb community currated list of <strong>Bitcoin only</strong> services.</p>
-        <q-btn :color="dark ? 'secondary' : 'black'" @click="toggle">{{ dark ? 'Light' : 'Dark' }}</q-btn>
+          <p :class="$q.dark.isActive ? 'text-subtitle1 q-mr-sm q-mt-lg text-black' : 'text-subtitle1 q-mr-sm q-mt-lg'">A pleb community currated list of <strong>Bitcoin only</strong> services.</p>
+        <q-btn :color="dark ? 'primary' : 'black'" @click="toggle">{{ dark ? 'Light' : 'Dark' }}</q-btn>
       </q-toolbar>
     </q-header>
 

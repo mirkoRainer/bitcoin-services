@@ -18,7 +18,7 @@ export enum ServiceCategory {
 // I know there are SO many more, but let's add them as they come up.
 export enum Locale {
   'Global',
-  'US',
+  'USA',
   'Canada',
   'El Salvador',
   'Guatemala'
