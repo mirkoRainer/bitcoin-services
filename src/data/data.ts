@@ -42,5 +42,12 @@ export const data: Service[] = [
     description: 'BTCPay Server is a self-hosted, open-source cryptocurrency payment processor. It\'s secure, private, censorship-resistant and free.',
     locales: [Locale.Global],
     categories: [ServiceCategory['Business Products'], ServiceCategory.Payments]
+  },
+  {
+    name: 'bitrawr',
+    url: 'https://www.bitrawr.com/',
+    description: 'Bitcoin is everywhere. But how long did it take you to grasp sound money, Austrian economics, blockchain technology, and the failures of central banking?',
+    locales: [Locale.Global],
+    categories: [ServiceCategory.Education]
   }
 ];
