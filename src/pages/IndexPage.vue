@@ -12,7 +12,7 @@
         <q-card-section class="q-pa-sm">
           <div class="q-pa-sm">
             <q-icon name="eva-github" />
-            <a href="https://github.com/mirkoRainer/bitcoin-services/issues/new" target="_blank">Visit our GitHub and file an issue</a> to request new information to be added.
+            <a href="https://github.com/mirkoRainer/bitcoin-services/issues/new?assignees=mirkoRainer&labels=&template=new-service-request.md&title=" target="_blank">Visit our GitHub and file an issue</a> to request new information to be added.
           </div>
           <q-separator />
           <div class="q-pa-sm">
