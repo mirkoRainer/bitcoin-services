@@ -33,8 +33,8 @@ module.exports = configure(function (ctx) {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-webpack/boot-files
     boot: [
-      
-      
+
+
     ],
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-css
@@ -46,8 +46,8 @@ module.exports = configure(function (ctx) {
     extras: [
       // 'ionicons-v4',
       // 'mdi-v5',
-      // 'fontawesome-v6',
-      // 'eva-icons',
+      'fontawesome-v6',
+      'eva-icons',
       // 'themify',
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
@@ -98,10 +98,10 @@ module.exports = configure(function (ctx) {
           primary: '#ff9900',
           secondary: '#d68102',
           accent: '#9C27B0',
-  
+
           dark: '#121212',
           'dark-page': '#000000',
-  
+
           positive: '#21BA45',
           negative: '#C10015',
           info: '#31CCEC',
@@ -109,7 +109,7 @@ module.exports = configure(function (ctx) {
         }
       },
       dark: 'auto',
-      // iconSet: 'material-icons', // Quasar icon set
+      iconSet: 'fontawesome-v6',
       // lang: 'en-US', // Quasar language pack
 
       // For special cases outside of where the auto-import strategy can have an impact

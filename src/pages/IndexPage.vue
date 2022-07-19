@@ -1,5 +1,30 @@
 <template>
   <q-page class="row items-center justify-evenly">
+    <div class="q-pa-sm">
+      <q-btn :class="$q.dark.isActive ? 'q-pa-sm text-black' : 'q-pa-sm'" :color="$q.dark.isActive ? 'secondary' : 'primary'" @click="showHelpDialog = !showHelpDialog" icon="eva-github-outline" label="Are we missing something?"/>
+    </div>
+    <q-dialog v-model="showHelpDialog">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6">What are we missing?</div>
+        </q-card-section>
+
+        <q-card-section class="q-pa-sm">
+          <div class="q-pa-sm">
+            <q-icon name="eva-github" />
+            <a href="https://github.com/mirkoRainer/bitcoin-services/issues/new" target="_blank">Visit our GitHub and file an issue</a> to request new information to be added.
+          </div>
+          <q-separator />
+          <div class="q-pa-sm">
+            Or email gary@codechief.dev with any requests.
+          </div>
+        </q-card-section>
+
+        <q-card-actions align="right">
+          <q-btn flat label="OK" color="primary" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
     <q-table
       :fullscreen="isFullscreen"
       :columns="columns"
@@ -112,6 +137,7 @@ export default defineComponent({
   setup() {
     const isFullscreen = ref(false);
     const $q = useQuasar();
+    const showHelpDialog = ref(false);
 
     return {
       isFullscreen,
@@ -120,7 +146,8 @@ export default defineComponent({
       pagination,
       Locale,
       ServiceCategory,
-      $q
+      $q,
+      showHelpDialog
     };
   }
 });
