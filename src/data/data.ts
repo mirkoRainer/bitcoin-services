@@ -53,7 +53,7 @@ export const data: Service[] = [
   {
     name: 'Machankura',
     url: 'https://8333.mobi/',
-    description: 'Machankura is a custodial lightning service that is helping to on board millions of Africans onto the Bitcoin network. We do that by utilizing a common technology here on the continent called USSD./nSince most of the population uses feature phones, we thought using the existing USSD technology combined with the lightning network could enable anyone send and receive Bitcoin regardless of the phone used. We are currently operational in 6 different countries; Uganda, South Africa, Kenya, Nigeria, Ghana and Malawi.',
+    description: 'Machankura is a custodial lightning service that is helping to on board millions of Africans onto the Bitcoin network. We do that by utilizing a common technology here on the continent called USSD. Since most of the population uses feature phones, we thought using the existing USSD technology combined with the lightning network could enable anyone send and receive Bitcoin regardless of the phone used. We are currently operational in 6 different countries; Uganda, South Africa, Kenya, Nigeria, Ghana and Malawi.',
     locales: [Locale.Africa, Locale.Uganda, Locale['South Africa'], Locale.Kenya, Locale.Nigeria, Locale.Ghana, Locale.Malawi],
     categories: [ServiceCategory.Payments, ServiceCategory['Lightning Network']]
   }
