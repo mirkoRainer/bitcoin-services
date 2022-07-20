@@ -13,6 +13,7 @@ export enum ServiceCategory {
   'Medical',
   'Food',
   'Education',
+  'Lightning Network'
 }
 
 // I know there are SO many more, but let's add them as they come up.
@@ -21,5 +22,12 @@ export enum Locale {
   'USA',
   'Canada',
   'El Salvador',
-  'Guatemala'
+  'Guatemala',
+  'Africa',
+  'Uganda',
+  'South Africa',
+  'Kenya',
+  'Nigeria',
+  'Ghana',
+  'Malawi'
 }
