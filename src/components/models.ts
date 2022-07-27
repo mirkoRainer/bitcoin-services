@@ -13,7 +13,9 @@ export enum ServiceCategory {
   'Medical',
   'Food',
   'Education',
-  'Lightning Network'
+  'Lightning Network',
+  'Podcast',
+  'Meetup'
 }
 
 // I know there are SO many more, but let's add them as they come up.
