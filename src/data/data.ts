@@ -9,6 +9,34 @@ export const data: Service[] = [
     categories: [ServiceCategory['Fiat Exchange'], ServiceCategory['Education']]
   },
   {
+    name: 'Citadel Dispatch',
+    url: 'https://citadeldispatch.com/',
+    description: 'An interactive live show about bitcoin, freedom, privacy, and open source software.',
+    locales: [Locale.Global],
+    categories: [ServiceCategory['Podcast'], ServiceCategory['Education']]
+  },
+  {
+    name: 'The Cafe Bitcoin Podcast',
+    url: 'https://open.spotify.com/show/6cd6PpeeaZLiTvsyh5SjGB',
+    description: 'Hello and welcome to The Café Bitcoin Podcast brought to you by Swan Bitcoin, the best way to buy and learn about Bitcoin. We’re excited to announce we are bringing the The Café Bitcoin conversation from Twitter Spaces to you on this show, The Café Bitcoin Podcast, Monday - Friday every week.',
+    locales: [Locale['USA, Virginia']],
+    categories: [ServiceCategory['Podcast'], ServiceCategory['Education']]
+  },
+  {
+    name: 'Shenandoah Bitcoin Club',
+    url: 'https://shenandoahbitcoin.club',
+    description: 'Education and collaboration in the Shenandoah valley are around Winchester, VA.',
+    locales: [Locale.USA],
+    categories: [ServiceCategory['Meetup']]
+  },
+  {
+    name: 'Uganda Bitcoin Meetups',
+    url: 'https://ugandabitcoinmeetups.com',
+    description: 'Come meet fellow Bitcoiners in Uganda — share, learn, and have fun!',
+    locales: [Locale.Uganda],
+    categories: [ServiceCategory['Meetup']]
+  },
+  {
     name: 'Oshi',
     url: 'https://www.oshi.tech/',
     description: 'Oshi is a powerful marketing and rewards platform built to replace stars, punch cards, and coffee points with something that people really want - Bitcoin.',

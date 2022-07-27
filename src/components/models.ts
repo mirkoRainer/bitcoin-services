@@ -22,6 +22,7 @@ export enum ServiceCategory {
 export enum Locale {
   'Global',
   'USA',
+  'USA, Virginia',
   'Canada',
   'El Salvador',
   'Guatemala',
