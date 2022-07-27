@@ -19,7 +19,7 @@ export const data: Service[] = [
     name: 'The Cafe Bitcoin Podcast',
     url: 'https://open.spotify.com/show/6cd6PpeeaZLiTvsyh5SjGB',
     description: 'Hello and welcome to The Café Bitcoin Podcast brought to you by Swan Bitcoin, the best way to buy and learn about Bitcoin. We’re excited to announce we are bringing the The Café Bitcoin conversation from Twitter Spaces to you on this show, The Café Bitcoin Podcast, Monday - Friday every week.',
-    locales: [Locale['USA, Virginia']],
+    locales: [Locale['Global']],
     categories: [ServiceCategory['Podcast'], ServiceCategory['Education']]
   },
   {
