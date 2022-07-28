@@ -73,22 +73,22 @@
                   <div class="text-center">{{ row.description }}</div>
                 </q-card-section>
                 <q-separator />
-                <q-card-section class="q-pa-sm">
-                  <div class="flex q-pa-sm">
+                <q-card-section class="q-pa-none">
+                  <div class="flex q-pb-none q-pt-sm q-pl-sm">
                     <div class="flex content-center">Locales:</div>
                   </div>
                   <div class="row">
-                    <div class="text-center q-pa-sm flex" v-for="locale in row.locales" :key="locale">
+                    <div class="text-center q-pa-none flex" v-for="locale in row.locales" :key="locale">
                       <q-chip :class="q$.dark.isActive ? 'bg-secondary text-black' : 'bg-primary text-white'">{{ Locale[locale] }}</q-chip>
                     </div>
                   </div>
                 </q-card-section>
-                <q-card-section class="q-pa-sm">
-                  <div class="flex q-pa-sm">
+                <q-card-section class="q-pa-none">
+                  <div class="flex q-pb-none q-pt-sm q-pl-sm">
                     <div class="flex content-center">Category:</div>
                   </div>
                   <div class="row">
-                    <div class="text-center q-pa-sm flex" v-for="category in row.categories" :key="category">
+                    <div class="text-center q-pa-none flex" v-for="category in row.categories" :key="category">
                       <q-chip :class="q$.dark.isActive ? 'bg-secondary text-black' : 'bg-primary text-white'">{{ ServiceCategory[category] }}</q-chip>
                     </div>
                   </div>
