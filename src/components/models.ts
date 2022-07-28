@@ -15,7 +15,9 @@ export enum ServiceCategory {
   'Education',
   'Lightning Network',
   'Podcast',
-  'Meetup'
+  'Meetup',
+  'Mining',
+  'Custody tools'
 }
 
 // I know there are SO many more, but let's add them as they come up.

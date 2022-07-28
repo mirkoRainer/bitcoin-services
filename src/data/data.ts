@@ -2,6 +2,20 @@ import { Locale, Service, ServiceCategory } from 'src/components/models';
 
 export const data: Service[] = [
   {
+    name: 'Fedi',
+    url: 'https://fedi.xyz/',
+    description: 'Billions of people are unable to hold bitcoin on or off exchanges. Fedi, powered by Fedimint, allows anyone to use Bitcoin easily, securely, and collaboratively.',
+    locales: [Locale.Global],
+    categories: [ServiceCategory['Custody tools']]
+  },
+  {
+    name: 'Braiins',
+    url: 'https://braiins.com/',
+    description: 'OPTIMIZE YOUR BITCOIN MINING OPERATIONS With a full-stack solution including ASIC autotuning firmware, farm management, and the world\'s first mining pool.',
+    locales: [Locale.Global],
+    categories: [ServiceCategory['Mining']]
+  },
+  {
     name: 'Swan Bitcoin',
     url: 'https://swanbitcoin.com/',
     description: 'A simple Bitcoin savings app that does all the work for you.',
