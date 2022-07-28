@@ -26,12 +26,14 @@
         </div>
       </q-scroll-area>
   </q-drawer>
-  <q-page class="row items-center justify-evenly flex">
-    <div class="flex-start">
-      <q-btn :class="q$.dark.isActive ? 'q-pa-sm text-black' : 'q-pa-sm'" :color="q$.dark.isActive ? 'secondary' : 'primary'" @click="drawerLeft = !drawerLeft" :icon="drawerLeft ? 'eva-arrow-left-outline' : 'eva-arrow-right-outline'" label="Filter"/>
-    </div>
-    <div class="q-pa-sm justify-left">
-      <q-btn :class="q$.dark.isActive ? 'q-pa-sm text-black' : 'q-pa-sm'" :color="q$.dark.isActive ? 'secondary' : 'primary'" @click="showHelpDialog = !showHelpDialog" icon="eva-github-outline" label="Are we missing something?"/>
+  <q-page class="column items-center justify-evenly flex">
+    <div class="row fit justify-center">
+      <div class="q-pa-sm">
+        <q-btn :class="q$.dark.isActive ? 'q-pa-sm text-black' : 'q-pa-sm'" :color="q$.dark.isActive ? 'secondary' : 'primary'" @click="drawerLeft = !drawerLeft" :icon="drawerLeft ? 'eva-arrow-left-outline' : 'eva-arrow-right-outline'" label="Filter"/>
+      </div>
+      <div class="q-pa-sm">
+        <q-btn :class="q$.dark.isActive ? 'q-pa-sm text-black' : 'q-pa-sm'" :color="q$.dark.isActive ? 'secondary' : 'primary'" @click="showHelpDialog = !showHelpDialog" icon="eva-github-outline" label="Are we missing something?"/>
+      </div>
     </div>
     <q-dialog v-model="showHelpDialog">
       <q-card>
@@ -55,48 +57,47 @@
         </q-card-actions>
       </q-card>
     </q-dialog>
-    <div class="row items-center justify-center flex">
-
-    <div v-for="row in rows" :key="row.name">
-    <div class="q-pa-xs col-xs-12 col-sm-6 col-md-4" style="width: 350px">
-      <q-card>
-        <q-card-section :class="q$.dark.isActive ? 'text-center text-h3 bg-secondary text-black' : 'text-center text-h3 bg-primary text-white'">
-          <strong>{{ row.name }}</strong>
-        </q-card-section>
-          <q-card-section class="flex flex-center q-pa-sm">
-            <div :class="q$.dark.isActive ? 'text-center text-white' :'text-center'"><a  :class="q$.dark.isActive ? 'text-white' :''" :href="row.url">{{ row.url }}</a></div>
-          </q-card-section>
-        <q-separator />
-        <q-card-section class="flex flex-center">
-          <div class="text-center">{{ row.description }}</div>
-        </q-card-section>
-        <q-separator />
-        <q-card-section class="q-pa-sm">
-          <div class="flex q-pa-sm">
-            <div class="flex content-center">Locales:</div>
-          </div>
-          <div class="row">
-            <div class="text-center q-pa-sm flex" v-for="locale in row.locales" :key="locale">
-              <q-chip :class="q$.dark.isActive ? 'bg-secondary text-black' : 'bg-primary text-white'">{{ Locale[locale] }}</q-chip>
+    <div class="fit row">
+        <div class="row items-center justify-center flex">
+          <div v-for="row in rows" :key="row.name">
+            <div class="q-pa-xs col-xs-12 col-sm-6 col-md-4" style="width: 350px">
+              <q-card>
+                <q-card-section :class="q$.dark.isActive ? 'text-center text-h3 bg-secondary text-black' : 'text-center text-h3 bg-primary text-white'">
+                  <strong>{{ row.name }}</strong>
+                </q-card-section>
+                <q-card-section class="flex flex-center q-pa-sm">
+                  <div :class="q$.dark.isActive ? 'text-center text-white' :'text-center'"><a  :class="q$.dark.isActive ? 'text-white' :''" :href="row.url">{{ truncate(row.url) }}</a></div>
+                </q-card-section>
+                <q-separator />
+                <q-card-section class="flex flex-center">
+                  <div class="text-center">{{ row.description }}</div>
+                </q-card-section>
+                <q-separator />
+                <q-card-section class="q-pa-sm">
+                  <div class="flex q-pa-sm">
+                    <div class="flex content-center">Locales:</div>
+                  </div>
+                  <div class="row">
+                    <div class="text-center q-pa-sm flex" v-for="locale in row.locales" :key="locale">
+                      <q-chip :class="q$.dark.isActive ? 'bg-secondary text-black' : 'bg-primary text-white'">{{ Locale[locale] }}</q-chip>
+                    </div>
+                  </div>
+                </q-card-section>
+                <q-card-section class="q-pa-sm">
+                  <div class="flex q-pa-sm">
+                    <div class="flex content-center">Category:</div>
+                  </div>
+                  <div class="row">
+                    <div class="text-center q-pa-sm flex" v-for="category in row.categories" :key="category">
+                      <q-chip :class="q$.dark.isActive ? 'bg-secondary text-black' : 'bg-primary text-white'">{{ ServiceCategory[category] }}</q-chip>
+                    </div>
+                  </div>
+                </q-card-section>
+              </q-card>
             </div>
           </div>
-        </q-card-section>
-        <q-card-section class="q-pa-sm">
-          <div class="flex q-pa-sm">
-            <div class="flex content-center">Category:</div>
-          </div>
-          <div class="row">
-            <div class="text-center q-pa-sm flex" v-for="category in row.categories" :key="category">
-              <q-chip :class="q$.dark.isActive ? 'bg-secondary text-black' : 'bg-primary text-white'">{{ ServiceCategory[category] }}</q-chip>
-            </div>
-          </div>
-        </q-card-section>
-
-      </q-card>
-    </div>
         </div>
     </div>
-
   </q-page>
 </template>
 
@@ -168,7 +169,7 @@ export default defineComponent({
     const categories = Object.keys(ServiceCategory).filter((v) => isNaN(Number(v)));
     const filterLocales = ref(locales)
     const filterCategories = ref(categories);
-    const rows = ref(data);
+    const rows = ref(data.sort((a, b) => a.name.localeCompare(b.name)));
 
     watch(filterLocales, () => {
       rows.value = data;
@@ -189,7 +190,15 @@ export default defineComponent({
     }
 
     function filter() {
-      rows.value = filterData(rows, filterLocales, filterCategories);
+      rows.value = filterData(rows, filterLocales, filterCategories).sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    function truncate(input:string) : string {
+      const length = 40
+      if (input.length > length) {
+          return input.substring(0, length) + '...';
+      }
+      return input;
     }
 
 
@@ -207,7 +216,8 @@ export default defineComponent({
       categories,
       locales,
       filterLocales,
-      filterCategories
+      filterCategories,
+      truncate
     };
   }
 });
